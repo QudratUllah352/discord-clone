@@ -1,0 +1,240 @@
+/* ==========================================================================
+   FEATURE SECTIONS (Z-PATTERN & MOCKUPS)
+   ========================================================================== */
+
+/* Main feature grid container */
+.feature__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: var(--space-3xl);
+}
+
+.feature__grid--reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.feature__grid--reverse .feature__image-wrap {
+  order: 2;
+}
+
+.feature__grid--reverse .feature__text {
+  order: 1;
+}
+
+/* Feature text styling */
+.feature__text h2 {
+  margin-bottom: var(--space-md);
+  color: var(--text-primary-dark);
+}
+
+.feature__text p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* Feature 4 Center layout */
+.feature-section--center {
+  background-color: var(--bg-light-alt);
+}
+
+.feature__center-desc {
+  max-width: 800px;
+  margin: var(--space-md) auto var(--space-2xl);
+  font-size: 1.2rem;
+}
+
+.feature__tech-visual {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.tech-card {
+  background-color: var(--bg-light);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.tech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   UI MOCKUPS (Discord In-App Aesthetics)
+   ========================================================================== */
+
+.feature__image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature__mockup {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--bg-dark-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  color: var(--text-primary-light);
+}
+
+/* Mockup Header (OS window dots) */
+.mockup-header {
+  background-color: var(--bg-dark-tertiary);
+  padding: 10px 14px;
+  display: flex;
+  gap: 6px;
+}
+
+.mockup-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.mockup-header .dot.red { background-color: var(--color-dnd); }
+.mockup-header .dot.yellow { background-color: var(--color-idle); }
+.mockup-header .dot.green { background-color: var(--color-online); }
+
+/* Mockup 1: Channels list */
+.mockup-body {
+  display: flex;
+  min-height: 220px;
+}
+
+.mock-sidebar {
+  width: 60px;
+  background-color: var(--bg-dark-tertiary);
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.mock-server-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-dark-card);
+  transition: border-radius var(--transition-fast), background-color var(--transition-fast);
+}
+
+.mock-server-icon.active {
+  background-color: var(--color-brand);
+  border-radius: 14px;
+}
+
+.mock-channel-list {
+  flex: 1;
+  background-color: var(--bg-dark-secondary);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mock-channel {
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary-light);
+}
+
+.mock-channel.active {
+  background-color: var(--bg-dark-card);
+  color: #FFFFFF;
+}
+
+.mock-channel.voice {
+  color: var(--color-online);
+}
+
+/* Mockup 2: Voice Chat room */
+.mockup-voice {
+  padding: var(--space-xl);
+  background-color: var(--bg-dark-secondary);
+}
+
+.mock-voice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: var(--space-md);
+}
+
+.voice-card {
+  background-color: var(--bg-dark-primary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.voice-card.user-speaking {
+  border-color: var(--color-online);
+}
+
+.mock-avatar {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-dark-tertiary);
+  border-radius: 50%;
+}
+
+/* Mockup 3: Roles and Badges */
+.mockup-roles {
+  padding: var(--space-2xl);
+  background-color: var(--bg-dark-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  align-items: center;
+}
+
+.role-badge {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.role-admin { background-color: #E91E63; }
+.role-mod   { background-color: #2196F3; }
+.role-member { background-color: var(--color-brand); }
+.role-bot   { background-color: #9C27B0; }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .feature__grid,
+  .feature__grid--reverse {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .feature__grid--reverse .feature__image-wrap {
+    order: 0;
+  }
+
+  .feature__grid--reverse .feature__text {
+    order: 1;
+  }
+}
